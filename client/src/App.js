@@ -1,6 +1,9 @@
 import React from "react";
-import logo from "./logo.svg";
-import "./App.css";
+import axios from "axios";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import Home from "./containers/Home";
+import NoMatch from "./containers/NoMatch";
+
 
 function App() {
   useEffect(() => {

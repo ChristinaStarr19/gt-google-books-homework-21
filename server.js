@@ -25,18 +25,18 @@ app.get("*"),
   };
 
 mongoose
-  .connect(process.env.MONGODB_URI || "mongodb://localhost/portfolio", {
+  .connect(process.env.MONGODB_URI || "mongodb://localhost/googlebooks", {
     useNewUrlParser: true,
     useUnifiedTopology: true,
   })
   .then(() => {
-    console.log("Successfullyconnectedtodatabase.");
+    console.log("Successfully connected to database.");
   })
   .catch((err) => {
-    console.log("Unabletoconnecttodatabase.");
+    console.log("Unable to connect to database.");
     console.log(err);
   });
 
 app.listen(PORT, function () {
-  console.log(`Expressserverisrunningonhttp://localhost:${PORT}!`);
+  console.log(`Express server is running on http://localhost:${PORT}!`);
 });
